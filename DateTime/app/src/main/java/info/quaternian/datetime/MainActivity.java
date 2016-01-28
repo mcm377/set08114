@@ -4,6 +4,11 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.TextView;
+import java.util.Date;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -12,6 +17,14 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button btn1 = (Button) findViewById(R.id.button1);
+            btn1.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    TextView tv1 = (TextView) findViewById(R.id.textView1);
+                    tv1.setText(new Date().toString());
+                }
+            });
     }
 
     @Override
