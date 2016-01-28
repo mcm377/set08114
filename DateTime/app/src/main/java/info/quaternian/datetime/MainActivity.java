@@ -9,6 +9,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 import java.util.Date;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -23,6 +24,7 @@ public class MainActivity extends ActionBarActivity {
                 public void onClick(View v) {
                     TextView tv1 = (TextView) findViewById(R.id.textView1);
                     tv1.setText(new Date().toString());
+                    Toast.makeText(MainActivity.this, tv1.getText(), Toast.LENGTH_LONG).show();
                 }
             });
     }
