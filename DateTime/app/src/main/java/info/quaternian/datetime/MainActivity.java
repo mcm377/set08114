@@ -1,5 +1,6 @@
 package info.quaternian.datetime;
 
+import android.annotation.SuppressLint;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -26,7 +27,7 @@ public class MainActivity extends ActionBarActivity {
                     TextView tv1 = (TextView) findViewById(R.id.textView1);
                     tv1.setText(new Date().toString());
                     Toast.makeText(MainActivity.this, tv1.getText(), Toast.LENGTH_LONG).show();
-                    Log.i("info.quaternian.datetime","Button pressed");
+                    Log.i("info.quaternian.datetime", "Button pressed");
                 }
             });
     }
