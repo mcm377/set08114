@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">DateTime</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="textView1">DateTime</string>
+    <string name="button1">Click Me!</string>
     <string name="action_settings">Settings</string>
 </resources>
