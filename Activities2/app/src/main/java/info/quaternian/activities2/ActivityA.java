@@ -18,7 +18,7 @@ public class ActivityA extends ActionBarActivity {
         Toast.makeText(getBaseContext(), "In Activity A", Toast.LENGTH_LONG).show();
 
         Intent activityB = new Intent(ActivityA.this, ActivityB.class);
-        startActivity(activityB);
+        onActivityResult(1, 1, activityB);
     }
 
     @Override
