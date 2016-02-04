@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="info.quaternian.activities" >
+    package="info.quaternian.activities2" >
 
     <application
         android:allowBackup="true"
@@ -18,7 +18,11 @@
         </activity>
         <activity
             android:name=".ActivityA"
-            android:label="@string/activity2_name" >
+            android:label="@string/title_activity_" >
+        </activity>
+        <activity
+            android:name=".ActivityB"
+            android:label="@string/title_activity_activity_b" >
         </activity>
     </application>
 
