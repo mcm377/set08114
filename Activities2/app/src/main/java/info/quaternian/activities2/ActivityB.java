@@ -1,5 +1,6 @@
 package info.quaternian.activities2;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,8 +14,13 @@ public class ActivityB extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_b);
-
         Toast.makeText(getBaseContext(), "In Activity B", Toast.LENGTH_LONG).show();
+
+        String stringToReturn = "Sally Smith";
+        Intent returnIntent = new Intent();
+        returnIntent.putExtra("String", stringToReturn);
+        setResult(1, returnIntent);
+        finish();
     }
 
     @Override

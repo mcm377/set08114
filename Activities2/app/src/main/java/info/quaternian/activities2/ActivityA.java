@@ -1,5 +1,6 @@
 package info.quaternian.activities2;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -37,5 +38,17 @@ public class ActivityA extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        //Check which request we're responding to - only 1!
+        if (requestCode == 1) {
+            //Make sure request was successful
+            if (resultCode == 1) {
+                String returnString = data.getStringExtra("String");
+                Toast.makeText(getBaseContext(), "In activity A and string returned = "
+                        + returnString, Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }
