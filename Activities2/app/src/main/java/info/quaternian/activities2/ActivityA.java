@@ -16,6 +16,9 @@ public class ActivityA extends ActionBarActivity {
         setContentView(R.layout.activity_a);
 
         Toast.makeText(getBaseContext(), "In Activity A", Toast.LENGTH_LONG).show();
+
+        Intent activityB = new Intent(ActivityA.this, ActivityB.class);
+        startActivity(activityB);
     }
 
     @Override
